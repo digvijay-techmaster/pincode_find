@@ -1,0 +1,18 @@
+# Virtual environment (your installed packages)
+venv/
+.venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Secrets and settings (passwords, API keys, database links)
+.env
+.env.*
+!.env.example
+
+# Editor and system files
+.vscode/
+
+
