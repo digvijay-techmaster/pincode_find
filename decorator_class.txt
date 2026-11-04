@@ -1,0 +1,70 @@
+What is a normal method?
+Look at this:
+class Student:    def display(self):        print("Hello")
+
+
+
+When you call:
+s1 = Student()s1.display()
+
+
+
+Python automatically passes the object s1 as the first argument to the method.
+
+So internally, you can think of it as:
+Student.display(s1)
+
+
+
+That's why we write self as the first parameter.
+
+Remember: self refers to the current object.
+3. What is @classmethod?
+Now let's look at a class method.
+class Student:    college = "BMSIT"    @classmethod    def display(cls):        print(cls.college)
+
+
+
+Let's understand each part.
+
+A. @classmethod
+@classmethod
+
+
+
+This is a decorator that tells Python to treat the method as a class method.
+
+B. cls
+def display(cls):
+
+
+
+Here, cls refers to the class itself.
+
+In our example, cls refers to Student.
+
+C. Accessing class variables
+print(cls.college)
+
+
+
+This accesses the class variable college through the class.
+
+You can call this method directly using the class name:
+Student.display()
+
+
+
+Output:
+BMSIT
+
+
+Notice something important: We didn't create an object using Student().
+
+That's because a class method receives the class itself automatically.
+4. Difference between self and cls
+self	cls
+Used in normal instance methods	Used in class methods
+Refers to the current object	Refers to the current class
+Accesses object attributes	Accesses class attributes
+First parameter of an instance method	First parameter of a class method
